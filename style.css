@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .circle {
+    margin-left: 20px;
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    background: grey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+    animation-name: gira;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes gira {
+    from {
+        border-top: 2px solid #f00505;
+    }
+    25% {
+      border-right: 2px solid #f00505;
+    }
+    50% {
+      border-bottom : 2px solid #f00505;
+    }
+    to {
+      border-left: 2px solid #f00505;
+    }
+  }
+  
+  .olho {
+    background: black;
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+    
+    
+    animation-name: olho;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+    animation-timing-function: ease-in-out;
+  }
+  
+  .boca {
+    margin-left: 17px;
+    width: 220px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    display:flex;
+    margin-top: 185px;
+  }
+  .dente {
+    width: 12.5%;
+    height: 100%;
+    border: 1px solid grey;
+  }
+  
+  
+  @keyframes olho {
+    from {
+      transform: translatey(0);
+    }
+    25% {
+      transform: translatey(50%);
+    }
+     50% {
+      transform: translatey(100%);
+    }
+      75% {
+      transform: translatey(50%);
+    }
+    to {
+      transform: translatey(0);
+    }
+  }
